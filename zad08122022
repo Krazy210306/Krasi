@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class zad08122022 {
+	public static int Tabeli (int x) 
+	{
+		int br = 0;
+		int Tab = 1; 
+		for (int i=1; i <= x ; i++) 
+		{	
+			int p = i;
+			
+			do
+			{
+				if (p%10 == 2) 
+				{
+					 br++;
+					 
+					break;
+				}
+				
+				p = p/10;
+				Tab++;
+			}
+			
+			while (p/10>0);
+
+		}
+		return (br);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner inp=new Scanner(System.in);
+
+		int x;
+		
+		do 
+			
+		{
+			System.out.println("Please enter a five digit number: ");
+			x = inp.nextInt();
+		}
+		
+		while (x<10000 || x>99999);
+		
+		System.out.println("Number of signs changed: " + Tabeli(x));
+	}
+
+}
