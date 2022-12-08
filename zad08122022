@@ -14,7 +14,6 @@ public class zad08122022 {
 				if (p%10 == 2) 
 				{
 					 br++;
-					 
 					break;
 				}
 				
