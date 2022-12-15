@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class zad15122022 {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner inp=new Scanner(System.in);
+
+int x=inp.nextInt(); 
+double [] mas= new double[x];
+
+input(mas);
+output(mas);
+mas(mas);
+	}
+
+	public static void input(double [] mas) {
+
+		Scanner inp=new Scanner(System.in);
+		for(int i=0;i<mas.length;i++)
+		{
+			mas[i]=inp.nextDouble();	//vuvejdane na chisla v masiva
+		}
+		
+	}
+	
+	public static void output(double [] mas) {
+		for(int i=0;i<mas.length;i++)System.out.println(mas[i]);	//izvejdane na chislata
+	}
+	
+	public static void mas(double [] mas) {
+		double sr=0;	//sredno aritmetichno
+		int br=0;	//broqch
+		for(int i=0;i<mas.length;i++)sr+=mas[i];
+		sr=sr/mas.length;	//namirane na srednoto aritmetichno
+		for(int i=0;i<mas.length;i++) 
+		{
+			if(mas[i]>sr)br++;	//namirane na broq na chislata po golemi ot srednoto aritmetichno
+		}
+		System.out.println("Броя е - "+br);
+	}
+
+}
