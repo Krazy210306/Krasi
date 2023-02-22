@@ -1,0 +1,232 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.util.Scanner;
+import java.awt.event.ActionEvent;
+
+public class Imedaima extends JFrame {
+
+	private JPanel contentPane;
+	private final ButtonGroup buttonGroup1 = new ButtonGroup();
+	private final ButtonGroup buttonGroup2 = new ButtonGroup();
+	private final ButtonGroup buttonGroup3 = new ButtonGroup();
+	private final ButtonGroup buttonGroup5 = new ButtonGroup();
+	private final ButtonGroup buttonGroup4 = new ButtonGroup();
+	private final ButtonGroup buttonGroup6 = new ButtonGroup();
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Imedaima frame = new Imedaima();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Imedaima() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 1025, 561);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 255));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("\u0422\u0435\u0441\u0442");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		lblNewLabel.setBounds(334, 11, 316, 23);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("\u041A\u043E\u0433\u0430 \u0435 \u0440\u043E\u0434\u0435\u043D \u0412\u0430\u0441\u0438\u043B \u041B\u0435\u0432\u0441\u043A\u0438?");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_1.setBounds(36, 59, 373, 23);
+		contentPane.add(lblNewLabel_1);
+		
+		JRadioButton True1 = new JRadioButton("1837");
+		buttonGroup1.add(True1);
+		True1.setBounds(36, 98, 62, 23);
+		contentPane.add(True1);
+		
+		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("1873");
+		buttonGroup1.add(rdbtnNewRadioButton_1);
+		rdbtnNewRadioButton_1.setBounds(113, 98, 62, 23);
+		contentPane.add(rdbtnNewRadioButton_1);
+		
+		JRadioButton rdbtnNewRadioButton_1_1 = new JRadioButton("2001");
+		buttonGroup1.add(rdbtnNewRadioButton_1_1);
+		rdbtnNewRadioButton_1_1.setBounds(189, 98, 62, 23);
+		contentPane.add(rdbtnNewRadioButton_1_1);
+		
+		JRadioButton rdbtnNewRadioButton_1_2 = new JRadioButton("2023");
+		buttonGroup1.add(rdbtnNewRadioButton_1_2);
+		rdbtnNewRadioButton_1_2.setBounds(263, 98, 62, 23);
+		contentPane.add(rdbtnNewRadioButton_1_2);
+		
+		JLabel lblNewLabel_1_1 = new JLabel("\u041A\u043E\u0439 \u0435 \u043D\u0430\u0440\u0438\u0447\u0430\u043D \u0430\u043F\u043E\u0441\u0442\u043E\u043B \u043D\u0430 \u0441\u0432\u043E\u0431\u043E\u0434\u0430\u0442\u0430?\r\n");
+		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_1_1.setBounds(36, 146, 373, 23);
+		contentPane.add(lblNewLabel_1_1);
+		
+		JRadioButton rdbtnNewRadioButton = new JRadioButton("\u041F\u0435\u0442\u043A\u043E \u0432\u043E\u0439\u0432\u043E\u0434\u0430");
+		buttonGroup2.add(rdbtnNewRadioButton);
+		rdbtnNewRadioButton.setBounds(20, 176, 119, 23);
+		contentPane.add(rdbtnNewRadioButton);
+		
+		JRadioButton True2 = new JRadioButton("\u0412\u0430\u0441\u0438\u043B \u041B\u0435\u0432\u0441\u043A\u0438");
+		buttonGroup2.add(True2);
+		True2.setBounds(141, 176, 110, 23);
+		contentPane.add(True2);
+		
+		JRadioButton rdbtnNewRadioButton_2_1 = new JRadioButton("\u0425\u0440\u0438\u0441\u0442\u043E \u0411\u043E\u0442\u0435\u0432");
+		buttonGroup2.add(rdbtnNewRadioButton_2_1);
+		rdbtnNewRadioButton_2_1.setBounds(254, 176, 103, 23);
+		contentPane.add(rdbtnNewRadioButton_2_1);
+		
+		JLabel lblNewLabel_1_1_1 = new JLabel("\u041F\u0440\u0435\u0437 \u043A\u043E\u044F \u0433\u043E\u0434\u0438\u043D\u0430 \u0438\u0437\u0431\u0443\u0445\u0432\u0430 \u0410\u043F\u0440\u0438\u043B\u0441\u043A\u043E\u0442\u043E \u0432\u044A\u0441\u0442\u0430\u043D\u0438\u0435?");
+		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_1_1_1.setBounds(36, 219, 373, 23);
+		contentPane.add(lblNewLabel_1_1_1);
+		
+		JRadioButton rdbtnNewRadioButton_1_1_1 = new JRadioButton("2001");
+		buttonGroup3.add(rdbtnNewRadioButton_1_1_1);
+		rdbtnNewRadioButton_1_1_1.setBounds(36, 249, 62, 23);
+		contentPane.add(rdbtnNewRadioButton_1_1_1);
+		
+		JRadioButton rdbtnNewRadioButton_1_3 = new JRadioButton("1873");
+		buttonGroup3.add(rdbtnNewRadioButton_1_3);
+		rdbtnNewRadioButton_1_3.setBounds(113, 249, 62, 23);
+		contentPane.add(rdbtnNewRadioButton_1_3);
+		
+		JRadioButton True3 = new JRadioButton("1876");
+		buttonGroup3.add(True3);
+		True3.setBounds(189, 249, 62, 23);
+		contentPane.add(True3);
+		
+		JRadioButton rdbtnNewRadioButton_1_5 = new JRadioButton("1928");
+		buttonGroup3.add(rdbtnNewRadioButton_1_5);
+		rdbtnNewRadioButton_1_5.setBounds(263, 249, 62, 23);
+		contentPane.add(rdbtnNewRadioButton_1_5);
+		
+		JLabel lblNewLabel_1_1_1_1 = new JLabel("\u041F\u0440\u0435\u0437 \u043A\u043E\u044F \u0433\u043E\u0434\u0438\u043D\u0430 \u0438\u0437\u0431\u0443\u0445\u0432\u0430 \u0421\u0442\u0430\u0440\u043E\u0437\u0430\u0433\u043E\u0440\u0441\u043A\u043E\u0442\u043E \u0432\u044A\u0441\u0442\u0430\u043D\u0438\u0435?");
+		lblNewLabel_1_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_1_1_1_1.setBounds(36, 293, 373, 23);
+		contentPane.add(lblNewLabel_1_1_1_1);
+		
+		JRadioButton rdbtnNewRadioButton_1_5_1 = new JRadioButton("1916");
+		buttonGroup4.add(rdbtnNewRadioButton_1_5_1);
+		rdbtnNewRadioButton_1_5_1.setBounds(36, 323, 62, 23);
+		contentPane.add(rdbtnNewRadioButton_1_5_1);
+		
+		JRadioButton rdbtnNewRadioButton_1_5_1_1 = new JRadioButton("1975");
+		buttonGroup4.add(rdbtnNewRadioButton_1_5_1_1);
+		rdbtnNewRadioButton_1_5_1_1.setBounds(113, 323, 62, 23);
+		contentPane.add(rdbtnNewRadioButton_1_5_1_1);
+		
+		JRadioButton True4 = new JRadioButton("1875");
+		buttonGroup4.add(True4);
+		True4.setBounds(189, 323, 62, 23);
+		contentPane.add(True4);
+		
+		JRadioButton False = new JRadioButton("1825");
+		buttonGroup4.add(False);
+		False.setBounds(263, 323, 62, 23);
+		contentPane.add(False);
+		
+		JLabel lblNewLabel_1_1_1_2 = new JLabel("\u041F\u0440\u0435\u0437 \u043A\u043E\u044F \u0433\u043E\u0434\u0438\u043D\u0430 \u0435 \u0443\u0431\u0435\u0441\u0435\u043D \u0412\u0430\u0441\u0438\u043B \u041B\u0435\u0432\u0441\u043A\u0438?");
+		lblNewLabel_1_1_1_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_1_1_1_2.setBounds(469, 59, 373, 23);
+		contentPane.add(lblNewLabel_1_1_1_2);
+		
+		JRadioButton True4_1 = new JRadioButton("1875");
+		buttonGroup5.add(True4_1);
+		True4_1.setBounds(469, 98, 62, 23);
+		contentPane.add(True4_1);
+		
+		JRadioButton False_1 = new JRadioButton("1825");
+		buttonGroup5.add(False_1);
+		False_1.setBounds(699, 98, 62, 23);
+		contentPane.add(False_1);
+		
+		JRadioButton True5 = new JRadioButton("1873");
+		buttonGroup5.add(True5);
+		True5.setBounds(547, 98, 62, 23);
+		contentPane.add(True5);
+		
+		JRadioButton True3_1 = new JRadioButton("1876");
+		buttonGroup5.add(True3_1);
+		True3_1.setBounds(624, 98, 62, 23);
+		contentPane.add(True3_1);
+		
+		JLabel lblNewLabel_1_1_1_2_1 = new JLabel("\u041A\u044A\u0434\u0435 \u0435 \u0440\u043E\u0434\u0435\u043D \u0425\u0440\u0438\u0441\u0442\u0438 \u0411\u043E\u0442\u0435\u0432?");
+		lblNewLabel_1_1_1_2_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_1_1_1_2_1.setBounds(469, 152, 373, 23);
+		contentPane.add(lblNewLabel_1_1_1_2_1);
+		
+		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("\u041A\u0430\u0440\u043B\u043E\u0432\u043E");
+		buttonGroup6.add(rdbtnNewRadioButton_2);
+		rdbtnNewRadioButton_2.setBounds(448, 182, 90, 23);
+		contentPane.add(rdbtnNewRadioButton_2);
+		
+		JRadioButton True6 = new JRadioButton("\u041A\u0430\u043B\u043E\u0444\u0435\u0440");
+		buttonGroup6.add(True6);
+		True6.setBounds(547, 182, 79, 23);
+		contentPane.add(True6);
+		
+		JRadioButton rdbtnNewRadioButton_2_3 = new JRadioButton("\u0425\u0430\u0441\u043A\u043E\u0432\u043E");
+		buttonGroup6.add(rdbtnNewRadioButton_2_3);
+		rdbtnNewRadioButton_2_3.setBounds(637, 182, 69, 23);
+		contentPane.add(rdbtnNewRadioButton_2_3);
+		
+		JRadioButton rdbtnNewRadioButton_2_4 = new JRadioButton("\u0412\u0430\u0440\u043D\u0430");
+		buttonGroup6.add(rdbtnNewRadioButton_2_4);
+		rdbtnNewRadioButton_2_4.setBounds(721, 182, 69, 23);
+		contentPane.add(rdbtnNewRadioButton_2_4);
+		
+		JLabel Gradename = new JLabel("\u041E\u0446\u0435\u043D\u043A\u0430:");
+		Gradename.setForeground(new Color(204, 51, 0));
+		Gradename.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 25));
+		Gradename.setHorizontalAlignment(SwingConstants.CENTER);
+		Gradename.setBounds(498, 272, 263, 57);
+		contentPane.add(Gradename);
+		
+		JButton btnNewButton = new JButton("\u0417\u0430\u0432\u044A\u0440\u0448\u0438 \u0442\u0435\u0441\u0442\u0430");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Scanner inp = new Scanner(System.in);
+				int i=0;
+				if(True1.isSelected())i++;
+				if(True2.isSelected())i++;
+				if(True3.isSelected())i++;
+				if(True4.isSelected())i++;
+				if(True5.isSelected())i++;
+				if(True6.isSelected())i++;
+				Gradename.setText("Оценка: "+i);
+			}
+		});
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnNewButton.setBounds(529, 219, 203, 39);
+		contentPane.add(btnNewButton);
+	}
+}
