@@ -1,0 +1,139 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class delenena7 extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField number;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					delenena7 frame = new delenena7();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public delenena7() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 745, 505);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("\u0412\u044A\u0432\u0435\u0434\u0438 \u0446\u044F\u043B\u043E \u0447\u0438\u0441\u043B\u043E:");
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 20));
+		lblNewLabel.setBounds(21, 61, 238, 43);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("\u0427\u0438\u0441\u043B\u0430\u0442\u0430, \u0434\u0435\u043B\u044F\u0449\u0438 \u0441\u0435 \u0431\u0435\u0437 \u043E\u0441\u0442\u0430\u0442\u044A\u043A \u043D\u0430 7 \u0441\u0430:");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 20));
+		lblNewLabel_1.setBounds(21, 115, 435, 43);
+		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_1_1 = new JLabel("\u0421\u0443\u043C\u0430\u0442\u0430 \u043D\u0430 \u0447\u0438\u0441\u043B\u0430\u0442\u0430 \u0435:");
+		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 20));
+		lblNewLabel_1_1.setBounds(21, 169, 238, 43);
+		contentPane.add(lblNewLabel_1_1);
+		
+		JLabel lblNewLabel_1_1_1 = new JLabel("\u041F\u0440\u043E\u0438\u0437\u0432\u0435\u0434\u0435\u043D\u0438\u0435\u0442\u043E \u043D\u0430 \u0447\u0438\u0441\u043B\u0430\u0442\u0430 \u0435:");
+		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 20));
+		lblNewLabel_1_1_1.setBounds(21, 223, 328, 43);
+		contentPane.add(lblNewLabel_1_1_1);
+		
+		number = new JTextField();
+		number.setBounds(269, 76, 86, 20);
+		contentPane.add(number);
+		number.setColumns(10);
+		
+		JLabel na7 = new JLabel("");
+		na7.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 20));
+		na7.setBounds(456, 115, 238, 43);
+		contentPane.add(na7);
+		
+		JLabel sum = new JLabel("");
+		sum.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 20));
+		sum.setBounds(456, 169, 238, 43);
+		contentPane.add(sum);
+		
+		JLabel pro = new JLabel("");
+		pro.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 20));
+		pro.setBounds(456, 223, 238, 43);
+		contentPane.add(pro);
+		
+		JButton btnNewButton = new JButton("\u041F\u0440\u0435\u0441\u043C\u0435\u0442\u043D\u0438");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				int n=Integer.parseInt(number.getText());
+				int []arr=new int[n/7];
+				int proizv=1,sum1=0;
+				
+				for(int i=0;i<arr.length;i++)
+				arr[i]=(i+1)*7;
+				String chisla="";
+				
+				for(int i=0;i<arr.length;i++) {
+				chisla=chisla+arr[i]+" ";
+				sum1+=arr[i];
+				proizv*=arr[i];}
+				na7.setText(chisla);
+				sum.setText(Integer.toString(sum1));
+				pro.setText(Integer.toString(proizv));
+				
+				if(n<=6) {
+					na7.setText("");
+					sum.setText("");
+					pro.setText("");
+				}
+			}
+		});
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		btnNewButton.setBounds(41, 330, 218, 64);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("\u0418\u0437\u0447\u0438\u0441\u0442\u0438");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				na7.setText("");
+				sum.setText("");
+				pro.setText("");
+			}
+		});
+		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		btnNewButton_1.setBounds(269, 330, 218, 64);
+		contentPane.add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("\u0418\u0437\u0445\u043E\u0434");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		btnNewButton_2.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		btnNewButton_2.setBounds(497, 330, 218, 64);
+		contentPane.add(btnNewButton_2);
+	}
+}
