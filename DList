@@ -1,0 +1,57 @@
+public class DList<T> {
+	class Node{
+		private T data;
+		private Node prev,next;
+	public Node(T v) {
+		data=v;
+		next=prev=null;
+	}
+	public Node(T v,Node nx,Node pr) {
+		data=v;
+		nx=next;
+		pr=prev;
+	}
+ public Node getPrev() {
+		return prev;
+	}
+	public void setPrev(T n) {
+		Node b=new Node(n);
+		this.prev = b;
+		next.prev=this;
+	}
+	public Node getNext() {
+		return next;
+	}
+	public void setNext(T n) {
+		Node a=new Node(n);
+		this.next = a;
+		next.prev=this;
+	}
+	@Override
+	public String toString() {
+		String s="{";
+		Node t=this;
+		while(t!=null) {
+			s+=t.data.toString()+" ";
+		    t=t.next;
+		}
+		s+="}";
+		   return s;
+	}
+	}
+	private Node first,last;
+	public DList() {
+	first = last = new Node(null);	
+	}
+	public Node getFirst() {
+		return first;
+	}
+	public Node getLast() {
+		return last;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
